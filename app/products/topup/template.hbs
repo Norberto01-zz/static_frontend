@@ -1,0 +1,191 @@
+
+    <h1>Where do you want to send top-up?</h1>
+
+    <article class="wrapfrtopup">
+            <!--<select name="whoto" id="whoto" class="form-control">-->
+                <!--<option value="DO">Dominican Republic</option>-->
+                <!--<option value="US">United State</option>-->
+                <!--<option value="PR">Puerto Rico</option>-->
+            <!--</select>-->
+
+        {{ww-countries allCountries=model.countries stateSetPrefix='setPrefix' }}
+
+        <div class="mask"></div>
+        <div class="detecting">
+            <img src="assets/images/signal.jpg" alt="Detecting Operator" class="center-block" />
+            <h1>DETECTING OPERATOR</h1>
+
+            <a href="#" class="btn_choose">Let me choose myself <span class="glyphicon glyphicon-menu-right"></span></a>
+        </div>
+    </article><!-- /wrapfrtopup-->
+
+    <article class="wrapfrtopup howmuch">
+        <h3>How much?</h3>
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item active">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 item">
+                <div class="dollar">
+                    <strong>USD</strong><br/>
+                    <strong>$5.00</strong>
+                </div>
+                <div class="peso">
+                    Buys <br/>
+                    DOP 223.90
+                </div>
+            </div>
+        </div>
+
+        <h3>Add a personal message</h3>
+        <textarea name="personal_message" id="personal_message" class="personal_message" maxlength="160" onkeyup="getCount(this)"></textarea>
+        <small class="pull-right" id="remaining">160</small>
+
+    </article><!-- /wrapfrtopup-->
+    <section class="actions">
+        <div id="login" class="login" data-content="login">
+            <div class="content">
+                <strong class="pull-left hidden-xs">1</strong>
+                <small>Have an account?</small><br/>
+                <h2>Login to pay</h2>
+            </div>
+        </div>
+        <div id="register" class="register" data-content="register">
+            <div class="content">
+                <strong class="pull-left hidden-xs">2</strong>
+                <small>New customer?</small><br/>
+                <h2>Register</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Content -->
+    <section class="login_content">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <img src="assets/images/mini_logo.jpg" alt="" class="center-block logomini">
+
+                <form action="">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign In" class="btn btn_login" />
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-6 with_networks">
+                <a href="#"><img src="assets/images/fb_login.jpg" alt="" class="center-block img-responsive"></a>
+                <a href="#"><img src="assets/images/tw_login.jpg" alt="" class="center-block img-responsive"></a>
+                <a href="#"><img src="assets/images/gp_login.jpg" alt="" class="center-block img-responsive"></a>
+            </div>
+        </div>
+    </section>
+    <!-- Register Content -->
+    <section class="register_content">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 with_networks">
+                <h3>Register with your <br/> social profile</h3>
+                <a href="#"><img src="assets/images/fb_login.jpg" alt="" class="img-responsive"></a>
+                <a href="#"><img src="assets/images/tw_login.jpg" alt="" class="img-responsive"></a>
+                <a href="#"><img src="assets/images/gp_login.jpg" alt="" class="img-responsive"></a>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <h3>Register with your <br/> email address</h3>
+                <form action="">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign Up" class="btn btn_login" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>

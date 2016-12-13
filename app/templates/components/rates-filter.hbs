@@ -1,0 +1,21 @@
+{{#if iso}}
+  <div class="wraptarifa_list" id="wraptarifa">
+      <div class="rates_title">
+          <p class="pull-left text-left">Region</p>
+          <p class="pull-right text-right">Price</p>
+      </div>
+      <div class="inner">
+          <ul class="region_list">
+              {{#each isoRate as |item|}}
+                  <li>
+                      <p class="pull-left text-left">
+                          <img src="assets/images/flags/{{item.ccIso}}.gif" alt="{{item.ccIso}}" class="pull-left" width="25" />
+                          {{item.countryName}}
+                      </p>
+                      <p class="pull-right text-right">{{item.peak}}c /min</p>
+                  </li>
+              {{/each}}
+          </ul>
+      </div>
+  </div><!--/tarifa -->
+{{/if}}

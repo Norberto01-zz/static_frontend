@@ -1,0 +1,10 @@
+<div class="row">
+    {{#each amounts as |amount| }}
+        <div class="col-md-3 col-sm-4 col-xs-6 item" data-amount="{{amount.rate}}">
+          <div class="dollar">
+            <strong>USD</strong><br/>
+            <strong>${{amount.rate}}</strong>
+          </div>
+        </div>
+    {{/each}}
+</div>

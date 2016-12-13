@@ -1,0 +1,35 @@
+<div class="rates-content">
+    <h1>Rates for International Calls</h1>
+    <form action="" class="frtopup">
+        <article class="wrapfrtopup wrap_rates">
+            <label for="whoto">Where will you be calling from?</label>
+            <select name="whoto" id="whoto" class="form-control" onChange={{action "filterByIso" value="target.value"}}>
+                <option>- Select a country -</option>
+                {{#each model.countries as |country|}}
+                    <option value="{{ country.isoCode }}">{{ country.printName }}</option>
+                {{/each}}
+            </select>
+            <label for="phonenum">Where will you call most?</label><br/>
+            <input type="tel" name="phonenum" id="phonenum" class="phone form-control" placeholder="Enter phone number" />
+        </article><!-- /wrapfrtopup-->
+        <div class="wraptarifa">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                      <h3>1.5 c/min</h3>
+                      <p>Fixed line calls</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                      <h3>2.5 c/min</h3>
+                      <p>Mobile calls</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--/tarifa -->
+        <div class="clearfix"></div>
+        {{rates-filter isoRate=isoCountry iso=currentRate}}
+        <div class="wrap_btn_buy">
+            <button class="btn_buy_minutes">Buy minutes</button>
+        </div>
+    </form><!--/endform -->
+</div>

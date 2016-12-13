@@ -1,0 +1,49 @@
+<form action="" class="frtopup" >
+    <label for="whoto">Who to?</label>
+    <select name="whoto" id="whoto" class="form-control" onChange={{ action "checkPrefix" }}>
+        <option value=0>- Country -</option>
+        {{#each allCountries as |country|}}
+            <option data-prefix="{{ country.prefix }}" value="{{ country.iso3 }}" label="{{ country.print_name }}">{{ country.iso2 }}</option>
+        {{/each}}
+    </select>
+    <div class="phonewrapper" {{ action "phoneVal" on="mouseLeave" }}>
+        <label for="phonenumber">Phone number?</label><br/>
+        <div class="phone-details" >
+            {{#if flagClass}}
+                <div class="id-countryselected" style="display: inline-block;">
+                    <div id="id-flagdiv" class="id-flagdiv float-left {{flagClass}}"></div>
+                    <span class="id-prefix dn-phone-prefix">+{{flag}}</span>
+                    <div class="dn-btn-border"></div>
+                </div>
+            {{/if}}
+            <div class="phone-input {{if flag "telephone" "microphone"}}">
+                <input type="tel" name="phonenumber" id="phonenumber" class="phone form-control"
+                       placeholder="Enter phone number" />
+                <input type="hidden" id="id-opc" value="">
+            </div>
+            <div class="phone-go">
+                <button class="go-under" type="button" {{ action "phoneVal" on="click" }}>Go</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="clearfix"></div>
+{{!#if operator}}
+<div class="row detected">
+    <div class="col-md-8 i-operator" >
+        <strong>Operator detected</strong>
+        <h1>{{operator}}</h1>
+    </div>
+    <div class="col-md-4">
+        <a href="" {{ action "phoneVal" on="click" }} class="pull-right change">
+            Change Operator <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+</div>
+
+<div class="detecting" style="display: block;">
+    <img src="http://67.222.240.237:8183/assets/images/signal.jpg" alt="Detecting Operator" class="center-block">
+    <h1>DETECTING OPERATOR</h1>
+    <a href="#" class="btn_choose">Let me choose myself <span class="glyphicon glyphicon-menu-right"></span></a>
+</div>
+{{!/if}}
